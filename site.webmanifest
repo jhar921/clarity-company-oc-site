@@ -1,0 +1,26 @@
+{
+  "name": "The Clarity Company",
+  "short_name": "Clarity",
+  "description": "Clarity Audit: map workflows, rank AI moves, recommend the first build.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F4EC",
+  "theme_color": "#F7F4EC",
+  "icons": [
+    {
+      "src": "/brand/assets/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/brand/assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
