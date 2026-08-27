@@ -1,2 +1,3 @@
-# clarity-company-oc-site
-Clarity Company OC Brand B StoryBrand production static site
+# The Clarity Company
+
+Public mirror of the Brand B + StoryBrand static site for Vercel Hobby deploys.
