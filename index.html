@@ -1,1 +1,1236 @@
-LOAD_FROM_SPILL
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Clarity Company | Clarity Audit</title>
+  <meta name="description" content="Stop guessing where AI belongs. A 90-minute Clarity Audit maps your highest-leverage workflows, ranks your top 3 AI opportunities, and names the first build." />
+  <meta name="theme-color" content="#F7F4EC" />
+  <meta property="og:title" content="The Clarity Company | Clarity Audit" />
+  <meta property="og:description" content="See how your company actually runs before you automate anything. Map three workflows. Rank the top AI moves. Name the first build." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://claritycompanyoc.com/" />
+  <meta property="og:image" content="https://claritycompanyoc.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Clarity Company | Clarity Audit" />
+  <meta name="twitter:description" content="See how your company actually runs before you automate anything. Map three workflows. Rank the top AI moves. Name the first build." />
+  <meta name="twitter:image" content="https://claritycompanyoc.com/og.png" />
+  <link rel="canonical" href="https://claritycompanyoc.com/" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/brand/assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/brand/assets/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <script defer data-domain="claritycompanyoc.com" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {
+      --color-honey: #FBBF24;
+      --color-ink: #0B0B0F;
+      --color-cream: #F7F4EC;
+      --color-paper: #FFFFFF;
+      --color-border: #E6E0D2;
+      --color-muted: #6B6B6B;
+
+      --font-display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+      --font-size-base: 16px;
+      --line-height: 1.65;
+      --content-max: 660px;
+      --shell-max: 1280px;
+      --gutter: clamp(24px, 4vw, 96px);
+      --section-spacing: clamp(72px, 10vw, 112px);
+      --radius-btn: 14px;
+      --radius-card: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal,
+      .hero-accent,
+      .hero-visual img,
+      .hero-visual::before {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+        animation: none !important;
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: var(--font-size-base);
+      line-height: var(--line-height);
+      color: var(--color-ink);
+      background: var(--color-cream);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    a { color: var(--color-ink); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--color-muted); }
+    img { max-width: 100%; display: block; }
+    button, input, textarea { font: inherit; }
+
+    .shell {
+      width: min(calc(100% - 2 * var(--gutter)), var(--shell-max));
+      margin-inline: auto;
+    }
+
+    .narrow {
+      width: min(100%, var(--content-max));
+      margin-inline: auto;
+    }
+
+    /* Typography */
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      margin: 0 0 16px;
+    }
+
+    h1, h2, .price {
+      font-family: var(--font-display);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.12;
+      color: var(--color-ink);
+    }
+
+    h1 {
+      font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+      max-width: 14ch;
+    }
+
+    h2 {
+      font-size: clamp(1.65rem, 3.2vw, 2.35rem);
+    }
+
+    h3 {
+      margin: 0;
+      font-family: var(--font-body);
+      font-size: 1.0625rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      color: var(--color-ink);
+    }
+
+    p { margin: 0; color: var(--color-ink); }
+    .lead { font-size: 1.0625rem; color: var(--color-muted); }
+    .muted { color: var(--color-muted); }
+    .small { font-size: 14px; }
+
+    .highlight-clarified {
+      font-style: italic;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      background: var(--color-honey);
+      padding: 0 3px;
+    }
+
+    section {
+      padding: var(--section-spacing) 0;
+    }
+
+    .section-alt {
+      background: var(--color-cream);
+    }
+
+    .stack-sm > * + * { margin-top: 12px; }
+    .stack-md > * + * { margin-top: 20px; }
+    .stack-lg > * + * { margin-top: 28px; }
+
+    /* Nav */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(247, 244, 236, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid transparent;
+      transition: border-color 160ms ease;
+    }
+
+    .nav.is-scrolled {
+      border-bottom-color: var(--color-border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 72px;
+    }
+
+    .wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--color-ink);
+      line-height: 1;
+    }
+
+    .wordmark img {
+      display: block;
+      height: 40px;
+      width: auto;
+    }
+
+    .wordmark-fallback {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      text-transform: lowercase;
+    }
+
+    .wordmark-fallback::after {
+      content: ".";
+      color: var(--color-honey);
+      font-size: 1.35em;
+      line-height: 0;
+      margin-left: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: var(--color-muted);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--color-ink); }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-btn);
+      background: var(--color-paper);
+      color: var(--color-ink);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after {
+      display: block;
+      width: 16px;
+      height: 1.5px;
+      background: currentColor;
+      position: relative;
+      transition: transform 160ms ease;
+    }
+
+    .menu-btn span::before,
+    .menu-btn span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    .menu-btn span::before { top: -5px; }
+    .menu-btn span::after { top: 5px; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: var(--radius-btn);
+      border: 1px solid transparent;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 140ms ease, color 140ms ease, border-color 140ms ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--color-ink);
+      color: var(--color-cream);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-honey);
+      color: var(--color-ink);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-ink);
+      border-color: var(--color-border);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-ink);
+      color: var(--color-ink);
+      background: var(--color-paper);
+    }
+
+    .btn-large {
+      min-height: 52px;
+      padding: 0 26px;
+      font-size: 16px;
+    }
+
+    /* Hero — one composition: brand, desire, CTA, mark */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      padding: clamp(48px, 8vw, 88px) 0 clamp(64px, 10vw, 96px);
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 70% 55% at 88% 28%, rgba(251, 191, 36, 0.18), transparent 62%),
+        linear-gradient(180deg, #FBF8F1 0%, var(--color-cream) 55%, #F3EFE4 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(220px, 0.85fr);
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-copy {
+      position: relative;
+      padding-left: 20px;
+      max-width: 36rem;
+    }
+
+    .hero-accent {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      bottom: 4px;
+      width: 2px;
+      background: var(--color-honey);
+      transform-origin: top;
+      transform: scaleY(0);
+      animation: accent-grow 700ms cubic-bezier(0.22, 1, 0.36, 1) 200ms forwards;
+    }
+
+    @keyframes accent-grow {
+      to { transform: scaleY(1); }
+    }
+
+    .hero h1 {
+      margin-bottom: 20px;
+      max-width: 14ch;
+    }
+
+    .hero .lead {
+      max-width: 42ch;
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .trust-line {
+      font-size: 14px;
+      color: var(--color-muted);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: clamp(240px, 42vw, 420px);
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 8% 6%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.28), transparent 68%);
+      filter: blur(8px);
+      animation: hero-glow 4.5s ease-in-out infinite alternate;
+    }
+
+    .hero-visual img {
+      position: relative;
+      width: min(72%, 320px);
+      height: auto;
+      filter: drop-shadow(0 18px 40px rgba(11, 11, 15, 0.08));
+      transform: translateY(8px);
+      opacity: 0;
+      animation: hero-mark-in 900ms cubic-bezier(0.22, 1, 0.36, 1) 180ms forwards;
+    }
+
+    @keyframes hero-mark-in {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes hero-glow {
+      from { opacity: 0.55; transform: scale(0.96); }
+      to { opacity: 1; transform: scale(1.04); }
+    }
+
+    /* Cards / lists */
+    .card-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card-grid.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-paper);
+      padding: 24px;
+    }
+
+    .card h3 { margin-bottom: 10px; }
+    .card p { color: var(--color-muted); font-size: 15px; }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .list-card h3 {
+      margin-bottom: 16px;
+    }
+
+    .check-list,
+    .x-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .check-list li,
+    .x-list li {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 10px;
+      align-items: start;
+      font-size: 15px;
+      color: var(--color-ink);
+    }
+
+    .check-list .mark {
+      color: var(--color-honey);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .x-list .mark {
+      color: var(--color-muted);
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* Process */
+    .process-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .process-item {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .process-num {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: var(--color-muted);
+      padding-top: 4px;
+    }
+
+    .process-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .process-item p {
+      color: var(--color-muted);
+      max-width: 52ch;
+    }
+
+    /* Offer block */
+    .offer-shell {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      overflow: hidden;
+      background: var(--color-paper);
+    }
+
+    .offer-top {
+      padding: 32px;
+      border-bottom: 1px solid var(--color-border);
+      background: var(--color-paper);
+    }
+
+    .price-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px 16px;
+      margin: 18px 0 8px;
+    }
+
+    .price {
+      font-size: clamp(2rem, 4vw, 2.75rem);
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+
+    .offer-body {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 0;
+    }
+
+    .offer-col {
+      padding: 28px 32px;
+    }
+
+    .offer-col + .offer-col {
+      border-left: 1px solid var(--color-border);
+      background: var(--color-cream);
+    }
+
+    .offer-col h3 {
+      margin-bottom: 16px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-muted);
+      font-weight: 500;
+    }
+
+    .guarantee {
+      margin-top: 24px;
+      padding: 16px 18px 16px 20px;
+      border-left: 3px solid var(--color-honey);
+      background: var(--color-cream);
+      border-radius: 0 var(--radius-btn) var(--radius-btn) 0;
+      font-size: 14px;
+      color: var(--color-ink);
+    }
+
+    /* Phase */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .phase-card {
+      padding: 22px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      background: var(--color-paper);
+    }
+
+    .phase-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-honey);
+      margin-bottom: 10px;
+    }
+
+    /* Book */
+    .book-panel {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .book-card {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      background: var(--color-paper);
+    }
+
+    .book-card.accent {
+      background: var(--color-paper);
+      border-color: var(--color-honey);
+      border-width: 2px;
+    }
+
+    .detail-list {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .detail-list li {
+      font-size: 15px;
+      padding-left: 16px;
+      position: relative;
+      color: var(--color-ink);
+    }
+
+    .detail-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-honey);
+      position: absolute;
+      left: 0;
+      top: 0.55em;
+    }
+
+    /* FAQ */
+    .faq-list {
+      display: grid;
+      gap: 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    details.faq-item {
+      border-bottom: 1px solid var(--color-border);
+      background: transparent;
+      padding: 0;
+    }
+
+    details.faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-weight: 500;
+      font-size: 15px;
+      padding: 8px 0;
+    }
+
+    details.faq-item summary::-webkit-details-marker { display: none; }
+
+    details.faq-item summary::after {
+      content: "+";
+      flex-shrink: 0;
+      color: var(--color-muted);
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1;
+      width: 24px;
+      text-align: center;
+      transition: transform 140ms ease;
+    }
+
+    details.faq-item[open] summary::after {
+      content: "\00d7";
+      font-size: 22px;
+    }
+
+    details.faq-item .faq-a {
+      padding: 0 0 20px;
+      color: var(--color-muted);
+      font-size: 15px;
+      max-width: 62ch;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--color-border);
+      padding: 40px 0 48px;
+      background: var(--color-cream);
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--color-muted);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--color-ink); }
+
+    /* Reveal */
+    .reveal {
+      opacity: 1;
+      transform: none;
+    }
+
+    .js-ready .reveal {
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 500ms ease, transform 500ms ease;
+    }
+
+    .js-ready .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Mobile nav drawer */
+    .mobile-panel {
+      display: none;
+      border-top: 1px solid var(--color-border);
+      padding: 12px 0 18px;
+    }
+
+    .mobile-panel.open { display: block; }
+
+    .mobile-panel a {
+      display: block;
+      padding: 12px 0;
+      color: var(--color-ink);
+      font-weight: 500;
+      border-bottom: 1px solid var(--color-border);
+      text-decoration: none;
+    }
+
+    .mobile-panel .btn {
+      width: 100%;
+      margin-top: 14px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .offer-body,
+      .book-panel,
+      .card-grid.three,
+      .phase-grid,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .offer-col + .offer-col {
+        border-left: 0;
+        border-top: 1px solid var(--color-border);
+      }
+
+      .nav-links,
+      .nav-actions .btn { display: none; }
+      .menu-btn { display: inline-flex; }
+
+      .hero h1 { max-width: none; }
+      section { padding: 72px 0; }
+      .footer-inner { flex-direction: column; }
+      .process-item { grid-template-columns: 48px 1fr; gap: 12px; }
+    }
+
+    @media (max-width: 520px) {
+      .cta-row .btn { width: 100%; }
+      .offer-top, .offer-col { padding: 24px; }
+      .hero-copy { padding-left: 16px; }
+      .hero-visual { min-height: 220px; }
+      .hero-visual img { width: min(58%, 220px); }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav" id="nav">
+    <div class="shell nav-inner">
+      <a class="wordmark" href="#top" aria-label="The Clarity Company home">
+        <img src="/brand/assets/clarity-wordmark.png" alt="The Clarity Company" width="160" height="87" />
+      </a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-links" id="nav-links"></ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" id="nav-cta" href="#book">Book a Clarity Audit</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <div class="shell mobile-panel" id="mobile-panel" hidden></div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <span class="hero-accent" aria-hidden="true"></span>
+          <p class="eyebrow" id="hero-eyebrow">Clarity Audit · 90 minutes</p>
+          <h1 id="hero-headline">See how your company actually runs before you automate anything.</h1>
+          <p class="lead" id="hero-subhead"></p>
+          <div class="cta-row">
+            <a class="btn btn-primary btn-large" id="hero-primary" href="#book">Book a Clarity Audit</a>
+            <a class="btn btn-secondary btn-large" id="hero-secondary" href="#process">See the plan</a>
+          </div>
+          <p class="trust-line" id="hero-trust"></p>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <img id="hero-mark" src="/brand/assets/clarity-monogram.png" alt="" width="320" height="320" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem (StoryBrand) -->
+    <section class="section-alt" id="problem">
+      <div class="shell narrow reveal stack-md">
+        <p class="eyebrow" id="problem-eyebrow"></p>
+        <h2 id="problem-headline"></h2>
+        <p class="lead" id="problem-body"></p>
+      </div>
+      <div class="shell" style="margin-top: 36px;">
+        <div class="card-grid three" id="problem-points"></div>
+      </div>
+    </section>
+
+    <!-- Guide (StoryBrand) -->
+    <section id="guide">
+      <div class="shell narrow reveal stack-md">
+        <p class="eyebrow" id="about-eyebrow"></p>
+        <h2 id="about-headline"></h2>
+        <p class="lead" id="about-body"></p>
+        <p class="muted" id="about-note"></p>
+        <ul class="check-list" id="about-bullets" style="margin-top: 8px;"></ul>
+      </div>
+    </section>
+
+    <!-- Plan (StoryBrand) -->
+    <section class="section-alt" id="process">
+      <div class="shell">
+        <div class="narrow reveal stack-md" style="margin-bottom: 28px;">
+          <p class="eyebrow" id="process-eyebrow"></p>
+          <h2 id="process-headline"></h2>
+          <p class="lead" id="process-intro"></p>
+        </div>
+        <div class="process-list reveal" id="process-steps"></div>
+      </div>
+    </section>
+
+    <!-- Offer / explanatory -->
+    <section id="audit">
+      <div class="shell stack-lg">
+        <div class="narrow reveal stack-md">
+          <p class="eyebrow" id="offer-eyebrow"></p>
+          <h2 id="offer-headline"></h2>
+          <p class="lead" id="offer-lead"></p>
+        </div>
+
+        <div class="offer-shell reveal">
+          <div class="offer-top">
+            <p class="eyebrow" style="margin-bottom: 10px;">Primary offer</p>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; letter-spacing: -0.02em;">Clarity Audit</h3>
+            <div class="price-row">
+              <div class="price" id="offer-price">$997</div>
+              <div class="muted small" id="offer-price-note"></div>
+            </div>
+            <p id="offer-promise" style="max-width: 58ch; color: var(--color-muted);"></p>
+            <div class="guarantee" id="offer-guarantee"></div>
+          </div>
+          <div class="offer-body">
+            <div class="offer-col">
+              <h3>What you get</h3>
+              <ul class="check-list" id="offer-includes"></ul>
+            </div>
+            <div class="offer-col">
+              <h3>What this is not</h3>
+              <ul class="x-list" id="offer-excludes"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success vs failure (StoryBrand stakes) -->
+    <section class="section-alt" id="stakes">
+      <div class="shell">
+        <div class="narrow reveal stack-md" style="margin-bottom: 28px;">
+          <p class="eyebrow" id="stakes-eyebrow"></p>
+          <h2 id="stakes-headline"></h2>
+        </div>
+        <div class="split reveal">
+          <div class="card list-card">
+            <h3 id="stakes-success-title">If you do this</h3>
+            <ul class="check-list" id="stakes-success"></ul>
+          </div>
+          <div class="card list-card">
+            <h3 id="stakes-failure-title">If you don't</h3>
+            <ul class="x-list" id="stakes-failure"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fit -->
+    <section id="fit">
+      <div class="shell">
+        <div class="narrow reveal stack-md" style="margin-bottom: 28px;">
+          <p class="eyebrow" id="fit-eyebrow"></p>
+          <h2 id="fit-headline"></h2>
+        </div>
+        <div class="split reveal">
+          <div class="card list-card">
+            <h3 id="fit-yes-title">This is for you if</h3>
+            <ul class="check-list" id="fit-yes"></ul>
+          </div>
+          <div class="card list-card">
+            <h3 id="fit-no-title">This is not for you if</h3>
+            <ul class="x-list" id="fit-no"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Book / CTA -->
+    <section class="section-alt" id="book">
+      <div class="shell book-panel reveal">
+        <div class="book-card accent stack-md">
+          <p class="eyebrow" id="book-eyebrow"></p>
+          <h2 id="book-headline"></h2>
+          <p class="muted" id="book-body"></p>
+          <div class="price" id="book-price">$997</div>
+          <ul class="detail-list" id="book-details"></ul>
+          <div class="cta-row" style="margin-top: 24px; margin-bottom: 0;">
+            <a class="btn btn-primary btn-large" id="book-primary" href="mailto:jake@searchoc.org?subject=Book%20Clarity%20Audit">Book a Clarity Audit</a>
+            <a class="btn btn-secondary btn-large" id="book-secondary" href="mailto:jake@searchoc.org?subject=Clarity%20Audit%20fit%20call">Email Jake first</a>
+          </div>
+        </div>
+
+        <div class="book-card stack-md">
+          <h3 style="font-size: 1.25rem;" id="book-steps-title">What happens after you reach out</h3>
+          <ol class="stack-md" id="book-steps" style="margin: 0; padding-left: 18px; color: var(--color-muted);"></ol>
+          <p class="small muted" id="book-footnote"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-alt" id="faq">
+      <div class="shell">
+        <div class="narrow reveal stack-md" style="margin-bottom: 28px;">
+          <p class="eyebrow" id="faq-eyebrow"></p>
+          <h2 id="faq-headline"></h2>
+        </div>
+        <div class="faq-list narrow reveal" id="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <div class="stack-sm" style="max-width: 42ch;">
+        <a class="wordmark" href="#top" aria-label="The Clarity Company home">
+        <img src="/brand/assets/clarity-wordmark.png" alt="The Clarity Company" width="160" height="87" />
+      </a>
+        <p class="small muted" id="footer-blurb"></p>
+        <p class="small muted" id="footer-copy"></p>
+      </div>
+      <div class="footer-links" id="footer-links"></div>
+    </div>
+  </footer>
+
+  <script src="./content.js"></script>
+  <script>
+    (function () {
+      const S = window.SITE;
+      if (!S) return;
+      document.documentElement.classList.add('js-ready');
+
+      const text = (id, value) => {
+        const el = document.getElementById(id);
+        if (el && value != null) el.textContent = value;
+      };
+
+      const setHref = (id, href) => {
+        const el = document.getElementById(id);
+        if (el && href) el.setAttribute('href', href);
+      };
+
+      const isLiveUrl = (url) =>
+        typeof url === 'string' &&
+        url.length > 0 &&
+        url !== '#book' &&
+        !url.startsWith('mailto:');
+
+      // Conversion priority: Stripe payment → booking calendar → in-page book → mailto
+      const primaryBookHref = (() => {
+        if (isLiveUrl(S.links.stripeUrl)) return S.links.stripeUrl;
+        if (isLiveUrl(S.links.bookingUrl)) return S.links.bookingUrl;
+        if (S.links.bookingUrl === '#book') return '#book';
+        return (S.links.emailHref || 'mailto:jake@searchoc.org') + '?subject=Book%20Clarity%20Audit';
+      })();
+
+      const primaryBookLabel = isLiveUrl(S.links.stripeUrl)
+        ? (S.book.primaryCtaPaid && S.book.primaryCtaPaid.label) || 'Pay $997 and book'
+        : (S.book.primaryCta && S.book.primaryCta.label) || 'Book a Clarity Audit';
+
+      const navCtaHref = primaryBookHref === '#book' ? '#book' : primaryBookHref;
+
+      // Meta
+      document.title = S.meta.title;
+      const desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.setAttribute('content', S.meta.description);
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', S.meta.title);
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', S.meta.description);
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      if (ogImage && S.meta.ogImage) {
+        const abs = S.meta.ogImage.startsWith('http')
+          ? S.meta.ogImage
+          : 'https://' + S.meta.domain + S.meta.ogImage;
+        ogImage.setAttribute('content', abs);
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical && S.meta.canonical) canonical.setAttribute('href', S.meta.canonical);
+
+      // Analytics: toggle Plausible script if disabled in content.js
+      if (!(S.analytics && S.analytics.enabled)) {
+        document.querySelectorAll('script[data-domain]').forEach((el) => el.remove());
+      } else if (S.analytics.domain) {
+        const p = document.querySelector('script[data-domain]');
+        if (p) p.setAttribute('data-domain', S.analytics.domain);
+      }
+
+      // Nav
+      const navLinks = document.getElementById('nav-links');
+      const mobilePanel = document.getElementById('mobile-panel');
+      navLinks.innerHTML = S.nav.links.map((l) => `<li><a href="${l.href}">${l.label}</a></li>`).join('');
+      mobilePanel.innerHTML = S.nav.links.map((l) => `<a href="${l.href}">${l.label}</a>`).join('') +
+        `<a class="btn btn-primary" href="${navCtaHref}">${primaryBookLabel}</a>`;
+      text('nav-cta', primaryBookLabel);
+      setHref('nav-cta', navCtaHref);
+
+      // Hero
+      text('hero-eyebrow', S.hero.eyebrow);
+      const headlineEl = document.getElementById('hero-headline');
+      if (headlineEl && S.hero.headline) {
+        headlineEl.textContent = S.hero.headline;
+      }
+      text('hero-subhead', S.hero.subhead);
+      text('hero-trust', S.hero.trustLine);
+      text('hero-primary', primaryBookLabel);
+      text('hero-secondary', S.hero.secondaryCta.label);
+      setHref('hero-primary', navCtaHref);
+      setHref('hero-secondary', S.hero.secondaryCta.href);
+      const heroMark = document.getElementById('hero-mark');
+      if (heroMark && S.brand && S.brand.monogram) {
+        heroMark.src = S.brand.monogram;
+      }
+
+      // Problem
+      text('problem-eyebrow', S.problem.eyebrow);
+      text('problem-headline', S.problem.headline);
+      text('problem-body', S.problem.body);
+      document.getElementById('problem-points').innerHTML = S.problem.points.map((p) => `
+        <article class="card reveal">
+          <h3>${p.title}</h3>
+          <p>${p.text}</p>
+        </article>
+      `).join('');
+
+      // Offer
+      text('offer-eyebrow', S.offer.eyebrow);
+      text('offer-headline', S.offer.headline);
+      text('offer-lead', S.offer.lead);
+      text('offer-price', S.offer.price);
+      text('offer-price-note', S.offer.priceNote);
+      text('offer-promise', S.offer.promise);
+      text('offer-guarantee', S.offer.guarantee);
+      document.getElementById('offer-includes').innerHTML = S.offer.includes.map((i) => `
+        <li><span class="mark" aria-hidden="true">✓</span><span>${i}</span></li>
+      `).join('');
+      document.getElementById('offer-excludes').innerHTML = S.offer.notIncluded.map((i) => `
+        <li><span class="mark" aria-hidden="true">–</span><span>${i}</span></li>
+      `).join('');
+
+      // Process
+      text('process-eyebrow', S.process.eyebrow);
+      text('process-headline', S.process.headline);
+      text('process-intro', S.process.intro);
+      document.getElementById('process-steps').innerHTML = S.process.steps.map((s) => `
+        <div class="process-item">
+          <div class="process-num">${s.num}</div>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.text}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Stakes (success vs failure)
+      if (S.stakes) {
+        text('stakes-eyebrow', S.stakes.eyebrow);
+        text('stakes-headline', S.stakes.headline);
+        text('stakes-success-title', S.stakes.successTitle);
+        text('stakes-failure-title', S.stakes.failureTitle);
+        document.getElementById('stakes-success').innerHTML = S.stakes.success.map((i) => `
+          <li><span class="mark" aria-hidden="true">✓</span><span>${i}</span></li>
+        `).join('');
+        document.getElementById('stakes-failure').innerHTML = S.stakes.failure.map((i) => `
+          <li><span class="mark" aria-hidden="true">–</span><span>${i}</span></li>
+        `).join('');
+      }
+
+      // Fit
+      text('fit-eyebrow', S.fit.eyebrow);
+      text('fit-headline', S.fit.headline);
+      text('fit-yes-title', S.fit.yesTitle);
+      text('fit-no-title', S.fit.noTitle);
+      document.getElementById('fit-yes').innerHTML = S.fit.yes.map((i) => `
+        <li><span class="mark" aria-hidden="true">✓</span><span>${i}</span></li>
+      `).join('');
+      document.getElementById('fit-no').innerHTML = S.fit.no.map((i) => `
+        <li><span class="mark" aria-hidden="true">–</span><span>${i}</span></li>
+      `).join('');
+
+      // Guide / about
+      text('about-eyebrow', S.about.eyebrow);
+      text('about-headline', S.about.headline);
+      text('about-body', S.about.body);
+      text('about-note', S.about.note);
+      document.getElementById('about-bullets').innerHTML = S.about.bullets.map((i) => `
+        <li><span class="mark" aria-hidden="true">✓</span><span>${i}</span></li>
+      `).join('');
+
+      // Book
+      text('book-eyebrow', S.book.eyebrow);
+      text('book-headline', S.book.headline);
+      text('book-body', S.book.body);
+      text('book-price', S.book.price);
+      text('book-footnote', S.book.footnote);
+      text('book-primary', primaryBookLabel);
+      text('book-secondary', S.book.secondaryCta.label);
+      setHref('book-primary', primaryBookHref === '#book'
+        ? (S.links.emailHref + '?subject=Book%20Clarity%20Audit')
+        : primaryBookHref);
+      setHref('book-secondary', S.links.fitCallUrl || S.book.secondaryCta.href);
+      document.getElementById('book-details').innerHTML = S.book.details.map((d) => `<li>${d}</li>`).join('');
+      const paid = isLiveUrl(S.links.stripeUrl);
+      text('book-steps-title', S.book.stepsTitle || 'What happens next');
+      const steps = paid ? (S.book.stepsPaid || S.book.steps) : S.book.steps;
+      if (steps && steps.length) {
+        document.getElementById('book-steps').innerHTML = steps.map((s) => `<li>${s}</li>`).join('');
+      }
+
+      // FAQ
+      text('faq-eyebrow', S.faq.eyebrow);
+      text('faq-headline', S.faq.headline);
+      document.getElementById('faq-list').innerHTML = S.faq.items.map((item) => `
+        <details class="faq-item">
+          <summary>${item.q}</summary>
+          <div class="faq-a">${item.a}</div>
+        </details>
+      `).join('');
+
+      // Footer
+      text('footer-blurb', S.footer.blurb);
+      text('footer-copy', S.footer.copyright);
+      document.getElementById('footer-links').innerHTML = S.footer.links.map((l) => `
+        <a href="${l.href}">${l.label}</a>
+      `).join('');
+
+      // Mobile menu
+      const menuBtn = document.getElementById('menu-btn');
+      menuBtn.addEventListener('click', () => {
+        const open = mobilePanel.classList.toggle('open');
+        mobilePanel.hidden = !open;
+        menuBtn.setAttribute('aria-expanded', String(open));
+      });
+      mobilePanel.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A') {
+          mobilePanel.classList.remove('open');
+          mobilePanel.hidden = true;
+          menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Sticky nav state
+      const nav = document.getElementById('nav');
+      const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Reveal on scroll
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+      document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+    })();
+  </script>
+</body>
+</html>
