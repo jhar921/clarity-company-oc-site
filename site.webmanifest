@@ -1,7 +1,7 @@
 {
   "name": "The Clarity Company",
   "short_name": "Clarity",
-  "description": "Clarity Audit: map workflows, rank AI moves, recommend the first build.",
+  "description": "Clarity Audit — map workflows, rank AI opportunities, name the first build.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F7F4EC",
@@ -20,7 +20,8 @@
     {
       "src": "/brand/assets/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
