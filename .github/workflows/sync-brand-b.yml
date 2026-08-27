@@ -1,0 +1,36 @@
+name: sync-brand-b
+on:
+  workflow_dispatch:
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch full site
+        run: |
+          set -e
+          BASE=https://temporary-flying-zenith-92um6g0.vercel.app
+          curl -fsSL "$BASE/" -o index.html
+          curl -fsSL "$BASE/content.js" -o content.js
+          curl -fsSL "$BASE/og.png" -o og.png
+          curl -fsSL "$BASE/favicon.ico" -o favicon.ico
+          curl -fsSL "$BASE/site.webmanifest" -o site.webmanifest
+          mkdir -p brand/assets
+          curl -fsSL "$BASE/brand/BRAND.md" -o brand/BRAND.md
+          curl -fsSL "$BASE/brand/assets/clarity-wordmark.png" -o brand/assets/clarity-wordmark.png
+          curl -fsSL "$BASE/brand/assets/clarity-monogram.png" -o brand/assets/clarity-monogram.png
+          curl -fsSL "$BASE/brand/assets/favicon-32.png" -o brand/assets/favicon-32.png
+          curl -fsSL "$BASE/brand/assets/apple-touch-icon.png" -o brand/assets/apple-touch-icon.png
+          curl -fsSL "$BASE/brand/assets/icon-512.png" -o brand/assets/icon-512.png
+          wc -c index.html
+          grep -q hero-visual index.html
+          grep -q FBBF24 index.html
+      - name: Commit
+        run: |
+          git config user.name "Jake"
+          git config user.email "jake@jakehartson.com"
+          git add -A
+          git commit -m "Restore full Brand B StoryBrand site from verified deploy" || echo nochange
+          git push
