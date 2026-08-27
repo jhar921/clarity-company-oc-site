@@ -1,5 +1,8 @@
 name: sync-brand-b
 on:
+  push:
+    paths:
+      - .github/workflows/sync-brand-b.yml
   workflow_dispatch:
 jobs:
   sync:
@@ -32,5 +35,6 @@ jobs:
           git config user.name "Jake"
           git config user.email "jake@jakehartson.com"
           git add -A
-          git commit -m "Restore full Brand B StoryBrand site from verified deploy" || echo nochange
+          git diff --staged --quiet && echo nochange && exit 0
+          git commit -m "Restore full Brand B StoryBrand site from verified deploy"
           git push
